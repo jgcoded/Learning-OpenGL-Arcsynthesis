@@ -1,0 +1,6 @@
+could not link program
+Link called without any attached shader objects.
+
+could not link program
+Link called without any attached shader objects.
+
