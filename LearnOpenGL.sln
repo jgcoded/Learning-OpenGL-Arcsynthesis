@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C++ Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tut01", "LearnOpenGL\LearnOpenGL.vcxproj", "{E9DB651B-638D-4A34-80DC-6DF92B131AA0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tut01_Interlude", "Tut01_Interlude\Tut01_Interlude.vcxproj", "{DC19981D-66B9-41D3-AF9E-22E1DE8860AF}"
@@ -14,6 +16,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tut03", "Tut03\Tut03.vcxpro
 	ProjectSection(ProjectDependencies) = postProject
 		{EE702804-925A-481F-9DB7-3501371D1B08} = {EE702804-925A-481F-9DB7-3501371D1B08}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tut04", "Tut04\Tut04.vcxproj", "{B5E0C4F3-A189-4FBE-A542-BBB1BC7AA666}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,10 @@ Global
 		{18834CB7-E696-4574-9948-AB4BEA07A3A1}.Debug|Win32.Build.0 = Debug|Win32
 		{18834CB7-E696-4574-9948-AB4BEA07A3A1}.Release|Win32.ActiveCfg = Release|Win32
 		{18834CB7-E696-4574-9948-AB4BEA07A3A1}.Release|Win32.Build.0 = Release|Win32
+		{B5E0C4F3-A189-4FBE-A542-BBB1BC7AA666}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B5E0C4F3-A189-4FBE-A542-BBB1BC7AA666}.Debug|Win32.Build.0 = Debug|Win32
+		{B5E0C4F3-A189-4FBE-A542-BBB1BC7AA666}.Release|Win32.ActiveCfg = Release|Win32
+		{B5E0C4F3-A189-4FBE-A542-BBB1BC7AA666}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
