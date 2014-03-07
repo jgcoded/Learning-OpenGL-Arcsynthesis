@@ -57,7 +57,7 @@ GLuint ogh_CreateShader(const char* path, GLenum shaderType)
 		return -1;
 
 	fileStream.seekg(0, fileStream.end);
-	fileLength = fileStream.tellg();
+	fileLength = (int)fileStream.tellg();
 	fileStream.seekg(0, fileStream.beg);
 
 	shaderData = new char[fileLength + 1];
