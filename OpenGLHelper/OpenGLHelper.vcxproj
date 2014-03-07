@@ -67,10 +67,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\LearnOpenGL\OpenGLHelper.cpp" />
+    <ClInclude Include="OpenGLHelper.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\LearnOpenGL\OpenGLHelper.h" />
+    <ClCompile Include="OpenGLHelper.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

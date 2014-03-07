@@ -44,7 +44,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\julio\projects\LearnOpenGL\LearnOpenGL;C:\Users\julio\projects\libs\glew-1.10.0\include;C:\Users\julio\projects\libs\glfw-3.0.4\deps;C:\Users\julio\projects\libs\glfw-3.0.4\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\julio\projects\LearnOpenGL\OpenGLHelper;C:\Users\julio\projects\libs\glew-1.10.0\include;C:\Users\julio\projects\libs\glfw-3.0.4\deps;C:\Users\julio\projects\libs\glfw-3.0.4\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

@@ -48,49 +48,49 @@ GLFWwindow* ogh_GetSharedContext()
 
 GLuint ogh_CreateShader(const char* path, GLenum shaderType)
 {
-    GLchar* shaderData;
-    int fileLength;
-    ifstream fileStream(path);
-    GLuint shaderHandle;
+	GLchar* shaderData;
+	int fileLength;
+	ifstream fileStream(path);
+	GLuint shaderHandle;
 
-    if (!fileStream.is_open())
-        return -1;
-    
-    fileStream.seekg(0, fileStream.end);
-    fileLength = fileStream.tellg();
-    fileStream.seekg(0, fileStream.beg);
-    
-    shaderData = new char[fileLength+1];
+	if (!fileStream.is_open())
+		return -1;
+
+	fileStream.seekg(0, fileStream.end);
+	fileLength = fileStream.tellg();
+	fileStream.seekg(0, fileStream.beg);
+
+	shaderData = new char[fileLength + 1];
 
 	if (shaderData == 0)
 		return -1; // no memory
-    
+
 	unsigned int i = 0;
 	while (fileStream.good())
 	{
 		shaderData[i] = fileStream.get();
-		if(!fileStream.eof())
+		if (!fileStream.eof())
 			++i;
 	}
 
 	shaderData[fileLength] = 0;
-    
-    shaderHandle = glCreateShader(shaderType);
-	const GLchar* sdata = shaderData;
-    glShaderSource(shaderHandle, 1, &sdata, NULL);
-    glCompileShader(shaderHandle);
-    
-    GLint status;
-    glGetShaderiv(shaderHandle, GL_COMPILE_STATUS, &status);
 
-    if(status == GL_FALSE)
+	shaderHandle = glCreateShader(shaderType);
+	const GLchar* sdata = shaderData;
+	glShaderSource(shaderHandle, 1, &sdata, NULL);
+	glCompileShader(shaderHandle);
+
+	GLint status;
+	glGetShaderiv(shaderHandle, GL_COMPILE_STATUS, &status);
+
+	if (status == GL_FALSE)
 		ogh_LogShaderError(shaderType, path, &shaderData, shaderHandle);
 
 	fileStream.close();
 
 	delete shaderData;
 
-    return shaderHandle;
+	return shaderHandle;
 }
 
 
@@ -105,8 +105,8 @@ GLuint ogh_CreateProgram(vector<GLuint> shaders)
 	glLinkProgram(shaderProgram);
 
 	glGetProgramiv(shaderProgram, GL_LINK_STATUS, &status);
-	
-	if(status == GL_FALSE)
+
+	if (status == GL_FALSE)
 		ogh_LogShaderProgramError(shaderProgram);
 
 	for (unsigned int i = 0; i < shaders.size(); ++i) {
@@ -114,7 +114,7 @@ GLuint ogh_CreateProgram(vector<GLuint> shaders)
 		glDeleteShader(shaders[i]);
 	}
 
-    return shaderProgram;
+	return shaderProgram;
 }
 
 
@@ -156,16 +156,16 @@ void ogh_LogShaderError(GLenum shaderType, const char* path, GLchar** shaderData
 void ogh_LogShaderProgramError(GLuint shaderProgram)
 {
 	ofstream error("Error.txt", ofstream::app);
-	
-    GLint logLength;
-    glGetProgramiv(shaderProgram, GL_INFO_LOG_LENGTH, &logLength);
-    char* log = new char[logLength + 1];
-    glGetProgramInfoLog(shaderProgram, logLength, NULL, log);
+
+	GLint logLength;
+	glGetProgramiv(shaderProgram, GL_INFO_LOG_LENGTH, &logLength);
+	char* log = new char[logLength + 1];
+	glGetProgramInfoLog(shaderProgram, logLength, NULL, log);
 
 	error << "could not link program" << endl;
 	error << log << endl;
 
 	error.close();
 
-    delete[] log;
+	delete[] log;
 }

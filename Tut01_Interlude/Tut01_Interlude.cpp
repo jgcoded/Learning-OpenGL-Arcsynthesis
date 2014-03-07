@@ -13,12 +13,12 @@ int main(int argc, char* argv[])
 
 	GLFWwindow* window;
 
-	if(!glfwInit())
+	if (!glfwInit())
 		return -1;
 
 	window = glfwCreateWindow(640, 480, "Learn Open GL", NULL, NULL);
 
-	if(!window)
+	if (!window)
 	{
 		glfwTerminate();
 		cout << "GLFW window creation failed" << endl;
@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 
 	GLenum error = glewInit();
 
-	if(error != GLEW_OK)
+	if (error != GLEW_OK)
 	{
 		glfwTerminate();
 		cout << "Glew init failed" << endl;
@@ -41,9 +41,9 @@ int main(int argc, char* argv[])
 	/* Vertex data */
 
 	const float vertexData[] = {
-        -0.5f, -0.5f, 0.0f, 1.0f,
-         0.0f, 0.5f, 0.0f, 1.0f,
-         0.5f, -0.5f, 0.0f, 1.0f
+		-0.5f, -0.5f, 0.0f, 1.0f,
+		0.0f, 0.5f, 0.0f, 1.0f,
+		0.5f, -0.5f, 0.0f, 1.0f
 	};
 
 	GLuint positionsBufferObject = ogh_CreateBuffer(GL_ARRAY_BUFFER,
@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
 		ogh_CreateShader(SRC_DIR "VertexShader.txt", GL_VERTEX_SHADER));
 	shaders.push_back(
 		ogh_CreateShader(SRC_DIR "FragmentShader.txt", GL_FRAGMENT_SHADER));
-	
+
 
 	/* Program */
 
@@ -67,7 +67,7 @@ int main(int argc, char* argv[])
 
 	/* Main loop */
 
-	while(!glfwWindowShouldClose(window))
+	while (!glfwWindowShouldClose(window))
 	{
 
 		/* Render here */
@@ -83,7 +83,7 @@ int main(int argc, char* argv[])
 			4, GL_FLOAT, false, 0, 0);
 		glEnableVertexAttribArray(vertexShaderPositionsAttribLocation);
 
-		glDrawArrays(GL_TRIANGLES, 0 , 3);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
 
 		glDisableVertexAttribArray(vertexShaderPositionsAttribLocation);
 
@@ -99,5 +99,5 @@ int main(int argc, char* argv[])
 	glDeleteProgram(shaderProgram);
 	glDeleteBuffers(1, &positionsBufferObject);
 	glfwTerminate();
-	
+
 }
