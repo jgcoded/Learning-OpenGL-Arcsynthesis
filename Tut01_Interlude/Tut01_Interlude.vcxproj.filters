@@ -20,11 +20,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\LearnOpenGL\FragmentShader.txt">
+    <Text Include="FragmentShader.txt">
       <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\LearnOpenGL\VertexShader.txt">
+    </Text>
+    <Text Include="VertexShader.txt">
       <Filter>Resource Files</Filter>
-    </None>
+    </Text>
   </ItemGroup>
 </Project>

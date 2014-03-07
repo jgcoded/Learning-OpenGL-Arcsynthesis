@@ -68,8 +68,8 @@
     <ClCompile Include="..\LearnOpenGL\Tut01_Interlude.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\LearnOpenGL\FragmentShader.txt" />
-    <None Include="..\LearnOpenGL\VertexShader.txt" />
+    <Text Include="FragmentShader.txt" />
+    <Text Include="VertexShader.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

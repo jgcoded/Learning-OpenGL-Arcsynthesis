@@ -1,7 +1,7 @@
 #include "OpenGLHelper.h"
 
 /* Location of shaders */
-#define SRC_DIR "C:/Users/julio/projects/LearnOpenGL/LearnOpenGL/"
+#define SRC_DIR "C:/Users/julio/projects/LearnOpenGL/Tut01_Interlude/"
 
 void resize(GLFWwindow* window, int width, int height)
 {

@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{18834CB7-E696-4574-9948-AB4BEA07A3A1}</ProjectGuid>
-    <RootNamespace>Tut02</RootNamespace>
+    <RootNamespace>Tut03</RootNamespace>
     <ProjectName>Tut03</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -69,8 +69,8 @@
     <ClCompile Include="Tut03.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\LearnOpenGL\FragmentShader.txt" />
-    <None Include="..\LearnOpenGL\VertexShader.txt" />
+    <Text Include="FragmentShader.txt" />
+    <Text Include="VertexShader.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
