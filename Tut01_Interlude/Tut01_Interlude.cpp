@@ -47,7 +47,7 @@ int main(int argc, char* argv[])
 	};
 
 	GLuint positionsBufferObject = ogh_CreateBuffer(GL_ARRAY_BUFFER,
-		vertexData, 12);
+		vertexData);
 
 	/* Shaders */
 

@@ -37,7 +37,7 @@ void ogh_LogShaderProgramError(GLuint shaderProgram);
 
 /* Create a buffer object */
 template<typename T>
-GLuint ogh_CreateBuffer(GLenum target, const T* data, int size)
+GLuint ogh_CreateBuffer(GLenum target, const T& data)
 {
 	GLuint bufferObject;
 
@@ -45,7 +45,7 @@ GLuint ogh_CreateBuffer(GLenum target, const T* data, int size)
 
 	glBindBuffer(target, bufferObject);
 
-	glBufferData(target, size * sizeof(T), data, GL_STATIC_DRAW);
+	glBufferData(target, sizeof(data), data, GL_STATIC_DRAW);
 
 	glBindBuffer(target, 0);
 
