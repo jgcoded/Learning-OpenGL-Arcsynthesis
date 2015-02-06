@@ -1,7 +1,10 @@
 #include "OpenGLHelper.h"
+#include <chrono>
 
 /* Location of shaders */
 #define SRC_DIR "C:/Users/julio/projects/LearnOpenGL/Tut05/"
+
+typedef chrono::time_point<chrono::system_clock> Time;
 
 void resize(GLFWwindow* window, int width, int height)
 {
@@ -232,6 +235,8 @@ int main(int argc, char* argv[])
 
 	glEnable(GL_DEPTH_CLAMP);
 
+	auto tStart = chrono::system_clock::now();
+
 	while (!glfwWindowShouldClose(window))
 	{
 
@@ -243,11 +248,13 @@ int main(int argc, char* argv[])
 
 		glBindVertexArray(vao);
 
-		glUniform3f(vsOffsetUniformLoc, 0.0f, 0.0f, 0.0f);
+		auto dTime = chrono::system_clock::now() - tStart;
+
+		glUniform3f(vsOffsetUniformLoc, cos(dTime.count() / 1e7), -sin(dTime.count() / 1e7), 0.0f);
 
 		glDrawElements(GL_TRIANGLES, sizeof(indexData), GL_UNSIGNED_SHORT, 0);
 
-		glUniform3f(vsOffsetUniformLoc, 0.0f, 0.0f, 0.0f);
+		glUniform3f(vsOffsetUniformLoc, cos(dTime.count() / 1e7), -sin(dTime.count() / 1e7), 0.0f);
 
 		glDrawElementsBaseVertex(GL_TRIANGLES, sizeof(indexData), GL_UNSIGNED_SHORT,
 			0, numberOfVertices / 2);

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tut01_Interlude", "Tut01_Interlude\Tut01_Interlude.vcxproj", "{DC19981D-66B9-41D3-AF9E-22E1DE8860AF}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -21,6 +21,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tut04", "Tut04\Tut04.vcxpro
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tut01", "Tut01\Tut01.vcxproj", "{3679E379-7B6A-4159-87A1-A28272853ACA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tut05", "Tut05\Tut05.vcxproj", "{BF2F7EB9-7D59-4EB8-8DC0-7C5B750DD90B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tut06", "Tut06\Tut06.vcxproj", "{FC4F7B18-788F-4202-B163-67FE5EC87C2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +52,14 @@ Global
 		{3679E379-7B6A-4159-87A1-A28272853ACA}.Debug|Win32.Build.0 = Debug|Win32
 		{3679E379-7B6A-4159-87A1-A28272853ACA}.Release|Win32.ActiveCfg = Release|Win32
 		{3679E379-7B6A-4159-87A1-A28272853ACA}.Release|Win32.Build.0 = Release|Win32
+		{BF2F7EB9-7D59-4EB8-8DC0-7C5B750DD90B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BF2F7EB9-7D59-4EB8-8DC0-7C5B750DD90B}.Debug|Win32.Build.0 = Debug|Win32
+		{BF2F7EB9-7D59-4EB8-8DC0-7C5B750DD90B}.Release|Win32.ActiveCfg = Release|Win32
+		{BF2F7EB9-7D59-4EB8-8DC0-7C5B750DD90B}.Release|Win32.Build.0 = Release|Win32
+		{FC4F7B18-788F-4202-B163-67FE5EC87C2C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FC4F7B18-788F-4202-B163-67FE5EC87C2C}.Debug|Win32.Build.0 = Debug|Win32
+		{FC4F7B18-788F-4202-B163-67FE5EC87C2C}.Release|Win32.ActiveCfg = Release|Win32
+		{FC4F7B18-788F-4202-B163-67FE5EC87C2C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

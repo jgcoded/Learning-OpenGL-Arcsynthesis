@@ -109,7 +109,7 @@ int main(int argc, char* argv[])
 	/* Create program */
 
 	GLuint shaderProgram = ogh_CreateProgram(shaders);
-
+	
 	GLint vertexShaderPositionsAttribLoc = glGetAttribLocation(shaderProgram,
 		"position");
 

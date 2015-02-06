@@ -63,6 +63,9 @@ int main(int argc, char* argv[])
 
 	/* End set up GLFW */
 
+	const char *version = (const char *)glGetString(GL_VERSION);
+	printf("%s", version);
+
 	float change = 0.0f;
 	const float vertexPositions[] = {
 		-0.5f + change, -0.5f, 0.0f, 1.0f,
